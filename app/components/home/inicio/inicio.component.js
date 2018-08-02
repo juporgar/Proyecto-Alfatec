@@ -1,99 +1,87 @@
 export const InicioComponent = {
     template: `
-        <div class="btn-toolbar">
-            <button class="btn btn-primary">Nuevo usuario</button>
-            <button class="btn">Borrar médicos</button>
-        </div>
-        <div class="well">
-        <table class="table">
-        <thead>
-            <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th style="width: 36px;"></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <td>1</td>
-            <td>Mark</td>
-            <td>Tompson</td>
-            <td>
-                <a href="user.html"><i class="icon-pencil"></i></a>
-                <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-            </td>
-            </tr>
-            <tr>
-            <td>2</td>
-            <td>Ashley</td>
-            <td>Jacobs</td>
-            <td>
-                <a href="user.html"><i class="icon-pencil"></i></a>
-                <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-            </td>
-            </tr>
-            <tr>
-            <td>3</td>
-            <td>Audrey</td>
-            <td>Ann</td>
-            <td>
-                <a href="user.html"><i class="icon-pencil"></i></a>
-                <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-            </td>
-            </tr>
-            <tr>
-            <td>4</td>
-            <td>John</td>
-            <td>Robinson</td>
-            <td>
-                <a href="user.html"><i class="icon-pencil"></i></a>
-                <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-            </td>
-            </tr>
-            <tr>
-            <td>5</td>
-            <td>Aaron</td>
-            <td>Butler</td>
-            <td>
-                <a href="user.html"><i class="icon-pencil"></i></a>
-                <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-            </td>
-            </tr>
-            <tr>
-            <td>6</td>
-            <td>Chris</td>
-            <td>Albert</td>
-            <td>
-                <a href="user.html"><i class="icon-pencil"></i></a>
-                <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-            </td>
-            </tr>
-        </tbody>
-        </table>
-        </div>
-        <div class="pagination">
-            <ul>
-                <li><a href="#">Prev</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">Next</a></li>
-            </ul>
-        </div>
-        <div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="myModalLabel">Delete Confirmation</h3>
-            </div>
-            <div class="modal-body">
-                <p class="error-text">Are you sure you want to delete the user?</p>
-            </div>
-            <div class="modal-footer">
-                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                <button class="btn btn-danger" data-dismiss="modal">Delete</button>
-            </div>
-        </div>   
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+		    <div class="card">
+		        <div class="card-body">
+		            <div class="row">
+		                <div class="col-md-2 border-right">
+		                    <h4>User</h4>
+		                </div>
+		                <div class="col-md-5">
+		                    <button type="button" class="btn btn-sm btn-primary">Añadir Usuario</button>
+		                </div>
+                        <div class="col-md-5">
+                            <button type="button" class="btn btn-sm">Borrar Medico</button>
+                        </div>
+		            </div>
+		            <div class="row">
+		                <div class="col-md-12">
+		                    <table class="table table-hover ">
+                                <thead class="bg-light ">
+                                  <tr>
+                                    <th>
+                                      <div class="form-check-inline">
+                                          <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" value="">
+                                           </label>
+                                       </div>
+                                    </th>  
+                                    <th>Username</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Edit</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                        <div class="form-check-inline">
+                                          <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" value="">
+                                           </label>
+                                       </div>
+                                    </td>  
+                                    <td><a href="#"><small>Johnyahua</small></a></td>
+                                    <td><small>Doe</small></td>
+                                    <td><small>john@example.com</small></td>
+                                    <td><small>Admin</small></td>
+                                    <td>
+                                        <a href="#"><i class="fa fa-pencil-square-o"></i></a>
+                                        <a href="#"><i class="fa fa-eye"></i></a>
+                                        <a href="#"><i class="fa fa-trash"></i></a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <div class="form-check-inline">
+                                          <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" value="">
+                                           </label>
+                                       </div>
+                                    </td>  
+                                    <td><a href="#"><small>Johnyahua</small></a></td>
+                                    <td><small>Doe</small></td>
+                                    <td><small>john@example.com</small></td>
+                                    <td><small>Admin</small></td>
+                                    <td>
+                                        <a href="#"><i class="fa fa-pencil-square-o"></i></a>
+                                        <a href="#"><i class="fa fa-eye"></i></a>
+                                        <a href="#"><i class="fa fa-trash"></i></a>
+                                    </td>
+                                  </tr>
+                                 
+                                 
+                                </tbody>
+                              </table>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+</div>   
         `
 }
