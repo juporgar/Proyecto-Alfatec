@@ -9,15 +9,6 @@
     height: 80vh;
     text-align: center;
 }
-h2{
-    display: flex;
-    justify-content: center;
-    color: orange;
-    margin-top: 50px;
-}
-p{
-    color: blueviolet;
-}
 .footer{
     height: 20vh;
     background-color: lightcyan;
