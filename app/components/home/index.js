@@ -4,7 +4,8 @@ import {RegistroComponent} from "./registro/registro.component";
 import {Error404} from "./404/error";
 
 const home = angular
-    .module('home',[])
+
+.module('home',[])
     .component('inicioComponent', InicioComponent)
     .component('registroComponent', RegistroComponent)
     .component('error404', Error404)
@@ -16,11 +17,10 @@ const home = angular
         .state('error404' , {
             url: '/error404',
             component:'error404'})
-        .state('inicio', {
-            url: '/Inicio',
-            component: 'inicioComponent'
-        }) ;
-    $urlRouterProvider.otherwise('/Inicio')                
+        .state('inicioComponent' , {
+            url: '/inicio',
+            component:'inicioComponent'})
+    $urlRouterProvider.otherwise('/error404')                
     }).name
 
 export default home

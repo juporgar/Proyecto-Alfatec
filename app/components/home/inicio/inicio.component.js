@@ -10,7 +10,7 @@ export const InicioComponent = {
 		                    <h4>User</h4>
 		                </div>
 		                <div class="col-md-5">
-		                    <button type="button" class="btn btn-sm btn-primary">Añadir Usuario</button>
+		                    <a ui-sref="registroComponent" class="btn btn-sm btn-primary">Añadir Usuario</a>
 		                </div>
                         <div class="col-md-5">
                             <button type="button" class="btn btn-sm">Borrar Medico</button>
