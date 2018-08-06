@@ -17,7 +17,7 @@ export const RegistroComponent = {
 							<h3>datos personales</h3>
 								<div>
 									<p>NHC</p> 
-									<input class="form-control" placeholder="número de historia clinica" name="usua" type="text" required>
+									<input class="form-control" placeholder="número de historia clinica" name="usua" type="number" required>
 								</div>
 								<div>
 									<p>Nombre</p> 
@@ -47,29 +47,29 @@ export const RegistroComponent = {
 								</div>
 								<div>
 									<p>Fecha de nacimiento</p> 
-									<input class="form-control" placeholder="Escribe tu fecha de cumpleaños" name="usua" type="date" required>
+									<input class="form-control" placeholder="Escribe tu fecha de cumpleaños" name="usua" type="date">
 								</div>
 								<div>
 									<p>NIF o Pasaporte</p> 
-									<input class="form-control" placeholder="Escribe tu NIF o Pasaporte" name="usua" type="text" required>
+									<input class="form-control" placeholder="Escribe tu NIF o Pasaporte" name="usua" type="text">
 								</div>
 								<br>
 							<h3>Dirección</h3>
 								<div>
 									<p>Calle</p> 
-									<input class="form-control" placeholder="Escribe tu calle" name="usua" type="text" required>
+									<input class="form-control" placeholder="Escribe tu calle" name="usua" type="text">
 								</div>
 								<div>
 									<p>Numero</p> 
-									<input class="form-control" placeholder="Numero de patio" name="usua" type="text" required>
+									<input class="form-control" placeholder="Numero de patio" name="usua" type="number">
 								</div>
 								<div>
 									<p>Puerta</p> 
-									<input class="form-control" placeholder="Numero de puerta" name="usua" type="text" required>
+									<input class="form-control" placeholder="Numero de puerta" name="usua" type="text">
 								</div>
 								<div>
 									<p>Código Postal</p> 
-									<input class="form-control" placeholder="Escribe el Código Postal" name="usua" type="text" required>
+									<input class="form-control" placeholder="Escribe el Código Postal" name="usua" type="number">
 								</div>
 								<div>
 									<p>Ciudad</p> 
@@ -79,10 +79,10 @@ export const RegistroComponent = {
 							<h3>Lista aseguradora</h3>
 								<div>
 									<p>Nombre aseguradora</p> 
-									<input class="form-control" placeholder="Escribe el nombre de la aseguradora" name="usua" type="text" ç>
+									<input class="form-control" placeholder="Escribe el nombre de la aseguradora" name="usua" type="text">
 								</div>
 								<div>
-									<p>Tipo de aseguradora</p> 
+									<p>Tipo de seguro</p> 
 										<select class="span3" id="subject" name="subject">
 											<option selected value="na">
 												Selecciona uno:
@@ -101,6 +101,10 @@ export const RegistroComponent = {
 											</option>
 										</select>
 								</div>
+								<div>
+									<p>Numero de la tarjeta</p> 
+									<input class="form-control" placeholder="Escribe el numero de la tarjeta" name="usua" type="number">
+								</div>
 						</form>
 					</div>
 
@@ -109,7 +113,7 @@ export const RegistroComponent = {
 							<h3>datos personales</h3>
 								<div>
 									<p>Nº colegiado</p> 
-									<input class="form-control" placeholder="Escribe el nº de colegiado" name="usua" type="text" required>
+									<input class="form-control" placeholder="Escribe el nº de colegiado" name="usua" type="number" required>
 								</div>
 								<div>
 									<p>Nombre</p> 
@@ -139,11 +143,11 @@ export const RegistroComponent = {
 								</div>
 								<div>
 									<p>Fecha de nacimiento</p> 
-									<input class="form-control" placeholder="Escribe tu fecha de cumpleaños" name="usua" type="date" required>
+									<input class="form-control" placeholder="Escribe tu fecha de cumpleaños" name="usua" type="date">
 								</div>
 								<div>
 									<p>NIF o Pasaporte</p> 
-									<input class="form-control" placeholder="Escribe tu NIF o Pasaporte" name="usua" type="text" required>
+									<input class="form-control" placeholder="Escribe tu NIF o Pasaporte" name="usua" type="text">
 								</div>
 								<div>	
 									<p>Tipo de profesional</p> 
@@ -166,19 +170,19 @@ export const RegistroComponent = {
 								<h3>Dirección</h3>
 								<div>
 									<p>Calle</p> 
-									<input class="form-control" placeholder="Escribe tu calle" name="usua" type="text" required>
+									<input class="form-control" placeholder="Escribe tu calle" name="usua" type="text">
 								</div>
 								<div>
 									<p>Numero</p> 
-									<input class="form-control" placeholder="Numero de patio" name="usua" type="text" required>
+									<input class="form-control" placeholder="Numero de patio" name="usua" type="number">
 								</div>
 								<div>
 									<p>Puerta</p> 
-									<input class="form-control" placeholder="Numero de puerta" name="usua" type="text" required>
+									<input class="form-control" placeholder="Numero de puerta" name="usua" type="text">
 								</div>
 								<div>
 									<p>Código Postal</p> 
-									<input class="form-control" placeholder="Escribe el Código Postal" name="usua" type="text" required>
+									<input class="form-control" placeholder="Escribe el Código Postal" name="usua" type="number">
 								</div>
 								<div>
 									<p>Ciudad</p> 
