@@ -1,5 +1,5 @@
 import angular from 'angular';
-import RegistroService from './registro/registro.service';
+import DatosService from './datos.service';
 import {InicioComponent} from "./inicio/inicio.component";
 import {RegistroComponent} from "./registro/registro.component";
 import {EditarComponent} from "./editar/editar.component";
@@ -9,12 +9,12 @@ import {Error404} from "./404/error";
 const home = angular
 
 .module('home',[])
-    .service('RegistroService', RegistroService)
     .component('inicioComponent', InicioComponent)
     .component('registroComponent', RegistroComponent)
     .component('editarComponent', EditarComponent)
     .component('infoComponent', InfoComponent)
     .component('error404', Error404)
+    .service('datosService', DatosService)
     .config(($stateProvider, $urlRouterProvider) => {
         $stateProvider
         .state('registroComponent' , {
@@ -24,7 +24,7 @@ const home = angular
             url: '/error404',
             component:'error404'})
         .state('inicioComponent' , {
-            url: '/inicio',
+            url: '/',
             component:'inicioComponent'})
         .state('infoComponent' , {
             url: '/info',

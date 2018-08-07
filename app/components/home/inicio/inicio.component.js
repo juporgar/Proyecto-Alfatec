@@ -1,4 +1,10 @@
+import controller from './inicio.controller'
+
 export const InicioComponent = {
+    bindings:{
+        dataResult: '<'
+    },
+    controller,
     template: `
     <div class="container-fluid">
 	<div class="row">
@@ -55,15 +61,15 @@ export const InicioComponent = {
                                            </label>
                                        </div>
                                     </th>  
-                                    <th>Username</th>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Role</th>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+                                    <th>NIF o Pasaporte</th>
+                                    <th>Profesión</th>
                                     <th>Edit</th>
                                   </tr>
                                 </thead>
                                 <tbody>                                     
-                                  <tr>
+                                  <tr ng-repeat="user in $ctrl.dataResult">
                                     <td>
                                         <div class="form-check-inline">
                                           <label class="form-check-label">
@@ -71,10 +77,10 @@ export const InicioComponent = {
                                            </label>
                                        </div>
                                     </td>  
-                                    <td><small>Johnyahua</small></td>
-                                    <td><small>Doe</small></td>
-                                    <td><small>john@example.com</small></td>
-                                    <td><small>Admin</small></td>
+                                    <td>{{user.nombre}}</td>
+                                    <td>{{user.primerApellido}}</td>
+                                    <td>{{user.nif}}</td>
+                                    <td>{{user.profesion}}</td>
                                     <td>
                                         <a ui-sref="editarComponent"><i class="fa fa-pencil-square-o"></i></a>
                                         <a ui-sref="infoComponent"><i class="fa fa-eye"></i></a>
