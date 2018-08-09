@@ -7,6 +7,7 @@ export const InicioComponent = {
     controller,
     template: `
     <div class="container-fluid">
+    <pre>{{$ctrl}}}</pre>
 	<div class="row">
 		<div class="col-md-12">
 		    <div class="card">
@@ -14,16 +15,20 @@ export const InicioComponent = {
 		            <div class="row">
 		                <div class="col-md-2 border-right">
 		                    <h4>Lista de usuarios</h4>
-		                </div>
-		                <div class="col-md-5">
+		                </div>		                
+		            </div>
+                    <div class="row">
+                    <div class="col-md-2 border-right">
+                    </div>	
+                    <div class="col-md-5">
 		                    <a ui-sref="registroComponent" class="btn btn-sm btn-primary">Añadir Usuario</a>
 		                </div>
                         <div class="col-md-5">
-                            <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#EliminarMedicos">
+                            <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#EliminarMedicos{{user}}">
                             Borrar Medico
                             </button>
                         </div>
-                         <div class="modal fade" id="EliminarMedicos" tabindex="-1" role="dialog" aria-labelledby="EliminarMedicos" aria-hidden="true">
+                         <div class="modal fade" id="EliminarMedicos" tabindex="-1" role="dialog" aria-labelledby="EliminarMedicos{{user}}" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -38,7 +43,7 @@ export const InicioComponent = {
                                         Ten cuidado, vas a borrar a todos los medicos ¿Estás seguro?
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="sumbit" class="btn btn-secondary">
+                                        <button type="sumbit" class="btn btn-secondary"  ng-click="$ctrl.deleteMedic()" data-dismiss="modal">
                                             Si
                                         </button>
                                         <button type="button" class="btn btn-primary" data-dismiss="modal">
@@ -48,19 +53,10 @@ export const InicioComponent = {
                                 </div>
                             </div>
                         </div>                    
-		            </div>
-		            <div class="row">
 		                <div class="col-md-12">
 		                    <table class="table table-hover ">
                                 <thead class="bg-light ">
-                                  <tr>
-                                    <th>
-                                      <div class="form-check-inline">
-                                          <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" value="">
-                                           </label>
-                                       </div>
-                                    </th>  
+                                  <tr> 
                                     <th>Nombre</th>
                                     <th>Apellido</th>
                                     <th>NIF o Pasaporte</th>
@@ -68,25 +64,30 @@ export const InicioComponent = {
                                     <th>Edit</th>
                                   </tr>
                                 </thead>
-                                <tbody>                                     
-                                  <tr ng-repeat="user in $ctrl.dataResult">
-                                    <td>
-                                        <div class="form-check-inline">
-                                          <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" value="">
-                                           </label>
-                                       </div>
-                                    </td>  
+                                <tbody ng-repeat="user in $ctrl.dataResult track by user.nif">                                     
+                                  <tr> 
                                     <td>{{user.nombre}}</td>
                                     <td>{{user.primerApellido}}</td>
                                     <td>{{user.nif}}</td>
                                     <td>{{user.profesion}}</td>
                                     <td>
-                                        <a ui-sref="editarComponent"><i class="fa fa-pencil-square-o"></i></a>
-                                        <a ui-sref="infoComponent"><i class="fa fa-eye"></i></a>
-                                        <a data-toggle="modal" data-target="#EliminarUsers"><i class="fa fa-trash"></i></a>
+                                        <a ng-if="user.tipo == 'Paciente'" ui-sref="editarPacienteComponent({userNIF: user.nif})">
+                                            <i class="fa fa-pencil-square-o"></i>
+                                        </a>
+                                        <a ng-if="user.tipo == 'Profesional'" ui-sref="editarProfesionalComponent({userNIF: user.nif})">
+                                            <i class="fa fa-pencil-square-o"></i>
+                                        </a>
 
-                                        <div class="modal fade" id="EliminarUsers" tabindex="-1" role="dialog" aria-labelledby="EliminarUsers" aria-hidden="true">
+                                        <a ng-if="user.tipo == 'Paciente'" ui-sref="infoPaciComponent({userNif: user.nif})">
+                                            <i class="fa fa-eye"></i>
+                                        </a>
+                                        <a ng-if="user.tipo == 'Profesional'" ui-sref="infoProfeComponent({userNif: user.nif})">
+                                            <i class="fa fa-eye"></i>
+                                        </a>
+
+                                        <a data-toggle="modal" data-target="#EliminarUsers{{user.nif}}"><i class="fa fa-trash"></i></a>
+
+                                        <div class="modal fade" id="EliminarUsers{{user.nif}}" tabindex="-1" role="dialog" aria-labelledby="EliminarUsers" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -101,7 +102,7 @@ export const InicioComponent = {
                                                     Ten cuidado, vas a borrar a este usuario ¿Estás seguro?
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="sumbit" class="btn btn-secondary">
+                                                    <button type="sumbit" ng-click="$ctrl.deleteUser(user.nif)" class="btn btn-secondary" data-dismiss="modal">
                                                         Si
                                                     </button>
                                                     <button type="button" class="btn btn-primary" data-dismiss="modal">
@@ -123,3 +124,7 @@ export const InicioComponent = {
 </div>   
         `
 }
+
+{/* <button  ng-click="$ctrl.deleteUser(user.nif)">
+<i class="fa fa-trash"></i>
+</button> */}

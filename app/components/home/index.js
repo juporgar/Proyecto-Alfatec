@@ -2,8 +2,10 @@ import angular from 'angular';
 import DatosService from './datos.service';
 import {InicioComponent} from "./inicio/inicio.component";
 import {RegistroComponent} from "./registro/registro.component";
-import {EditarComponent} from "./editar/editar.component";
-import {InfoComponent} from "./información/info.component";
+import {EditarPacienteComponent} from "./editar/editarPaciente.component";
+import {EditarProfesionalComponent} from "./editar/editarProfesional.component";
+import {InfoPaciComponent} from "./información/infoPaciente.component";
+import {InfoProfeComponent} from "./información/infoProfesional.component";
 import {Error404} from "./404/error";
 
 const home = angular
@@ -11,8 +13,10 @@ const home = angular
 .module('home',[])
     .component('inicioComponent', InicioComponent)
     .component('registroComponent', RegistroComponent)
-    .component('editarComponent', EditarComponent)
-    .component('infoComponent', InfoComponent)
+    .component('editarPacienteComponent', EditarPacienteComponent)
+    .component('editarProfesionalComponent', EditarProfesionalComponent)
+    .component('infoPaciComponent', InfoPaciComponent)
+    .component('infoProfeComponent', InfoProfeComponent)
     .component('error404', Error404)
     .service('datosService', DatosService)
     .config(($stateProvider, $urlRouterProvider) => {
@@ -26,12 +30,18 @@ const home = angular
         .state('inicioComponent' , {
             url: '/',
             component:'inicioComponent'})
-        .state('infoComponent' , {
-            url: '/info',
-            component:'infoComponent'})
-        .state('editarComponent' , {
-            url: '/editar',
-            component:'editarComponent'})    
+        .state('infoPaciComponent' , {
+            url: '/infopaci/:userNIF',
+            component:'infoPaciComponent'})
+        .state('infoProfeComponent' , {
+            url: '/infoprofe/:userNIF',
+            component:'infoProfeComponent'})
+        .state('editarPacienteComponent' , {
+            url: '/editarpaciente/:userNIF',
+            component:'editarPacienteComponent'})    
+        .state('editarProfesionalComponent' , {
+            url: '/editarprofesional/:userNIF',
+            component:'editarProfesionalComponent'})    
     $urlRouterProvider.otherwise('/error404')                
     }).name
 

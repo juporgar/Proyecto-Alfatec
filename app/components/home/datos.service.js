@@ -1,14 +1,44 @@
-export default class datosService{
-    constructor($http){
+export default class datosService {
+    constructor($http) {
         this.$http = $http;
+        this.users = [];
     }
 
-    getData(){
-        console.log("entro en getdata");
+    getData() {
+        return this.$http.get('datos/info.json')
+            .then(response => {
+                this.users = response.data
+                
+                return this.users
+            })
+    }
+    
+    deleteUser(nifUsua) {
+        console.log("Este es el:" + nifUsua);
         
-        return this.$http.get('/datos/info.json')
-            .then(response=>response.data)//donde se guarda la información y la pasamos con nombre de data
-            console.log(renponse);
-            
+        for (var i = 0; i < this.users.length; i++) {
+            if (this.users[i].nif === nifUsua) {
+                var usuario = this.users[i]
+                console.log(usuario);
+                this.users.splice(i,1);
+               
+            }
         }
+    }
+
+    deleteMedic() {
+        var profesiones = "Médico";
+       
+        for (var i = this.users.length -1; i >= 0; i--) {
+            console.log("Estos son los Médicos que tienes",  this.users[i].nombre , this.users[i].profesion);
+            if (this.users[i].profesion === profesiones) {
+                this.users.splice(i,1)
+                
+            }
+        }
+    }
+    getNif(nif){
+        console.log(nif);
+        
+    }
 }
