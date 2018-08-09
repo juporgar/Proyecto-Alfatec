@@ -86,7 +86,7 @@ export const EditarPacienteComponent = {
 					<div class="card-body">
 						<div class="row">
 							<div class="col-md-5">
-								<button type="submit" class="btn btn-primary">
+								<button type="submit" ng-click="$ctrl.editUser()" class="btn btn-primary">
 									Editar
 								</button>
 							</div>

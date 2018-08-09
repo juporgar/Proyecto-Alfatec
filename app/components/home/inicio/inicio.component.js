@@ -27,7 +27,7 @@ export const InicioComponent = {
                             Borrar Medico
                             </button>
                         </div>
-                         <div class="modal fade" id="EliminarMedicos" tabindex="-1" role="dialog" aria-labelledby="EliminarMedicos" aria-hidden="true">
+                         <div class="modal" id="EliminarMedicos" tabindex="-1" role="dialog" aria-labelledby="EliminarMedicos" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -88,7 +88,7 @@ export const InicioComponent = {
                                             <i class="fa fa-trash"></i>
                                         </a>
 
-                                        <div class="modal fade" id="EliminarUsers{{user.id}}" tabindex="-1" role="dialog" aria-labelledby="EliminarUsers" aria-hidden="true">
+                                        <div class="modal" id="EliminarUsers{{user.id}}" tabindex="-1" role="dialog" aria-labelledby="EliminarUsers{{user.id}}" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">

@@ -5428,8 +5428,8 @@ button.close {
   opacity: 0;
 }
 
-.modal-backdrop.show {
-  opacity: 0.5;
+.modal-backdrop {
+  display: none;
 }
 
 .modal-header {

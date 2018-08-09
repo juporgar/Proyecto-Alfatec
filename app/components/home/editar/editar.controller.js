@@ -10,11 +10,14 @@ class EditarController{
     getID(id){
         this.datosService.getData()
             .then(resultado =>{
-                console.log(resultado);
                  
                 this.user = resultado.filter(item => item.id == + id)[0];
-                console.log(this.user)               
             })
+    }
+    editUser(user){
+        
+        this.datosService.editUser(this.user);
+        
     }
 }
 

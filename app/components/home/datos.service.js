@@ -2,24 +2,27 @@ export default class datosService {
     constructor($http) {
         this.$http = $http;
         this.users = [];
+        this.loadData();
     }
 
      getData() {
-         return this.$http.get('datos/info.json')
-             .then(response => {
-                 this.users = response.data            
-                 return this.users
-             })
+        return Promise.resolve(this.users);
+        //  return this.$http.get('datos/info.json')
+        //      .then(response => {
+        //          this.users = response.data            
+        //          return this.users
+        //      })
      }
 
-    // save() {
-    //     console.log(this.users);
+     saveData(){
+        localStorage.setItem('users',JSON.stringify(this.users))
+        console.log('guardado');
         
-    //     localStorage.setItem('lists', JSON.stringify(this.users))
-    //   }
-    //   load() {
-    //     this.users = JSON.parse(localStorage.getItem('users')) || [];
-    //   }
+     }
+
+     loadData(){
+        this.users = JSON.parse(localStorage.getItem('users'))
+     }
     
     deleteUser(id) {
         console.log("Este es el:" + id);
@@ -31,6 +34,7 @@ export default class datosService {
                 this.users.splice(i,1);              
             }
         }
+        this.saveData();
     }
 
     deleteMedic() {
@@ -41,5 +45,17 @@ export default class datosService {
                 this.users.splice(i,1)               
             }
         }
+        this.saveData();
+    }
+
+    editUser(user){
+        console.log(this.users);
+        
+        for(var i = 0; i < this.users.length; i++){
+            if(this.users[i].id === user.id){
+               this.users[i] = user
+            }
+        }
+        this.saveData();
     }
 }
