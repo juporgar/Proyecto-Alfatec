@@ -1,5 +1,10 @@
+import controller from './editar.controller'
 export const EditarProfesionalComponent = {
-    template: `
+    bindings:{
+        dataResult: '<'
+    },
+    controller,
+	template: `
     <section id="tabs">
 	<div class="container">
 		<h6 class="section-title h1">Panel para editar profesionales</h6>
@@ -96,7 +101,7 @@ export const EditarProfesionalComponent = {
 			<div class="row">
 				<div class="col-md-5">
 					<button type="submit" class="btn btn-primary">
-						Añadir Registro
+						Editar
 					</button>
 				</div>
 				<div class="col-md-5">

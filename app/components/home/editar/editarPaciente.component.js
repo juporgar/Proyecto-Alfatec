@@ -1,4 +1,9 @@
+import controller from './editar.controller'
 export const EditarPacienteComponent = {
+    bindings:{
+        dataResult: '<'
+    },
+    controller,
 	template: `
 <section id="tabs">
 	<div class="container">
@@ -99,12 +104,26 @@ export const EditarPacienteComponent = {
 									<p>Numero de la tarjeta</p> 
 									<input class="form-control" placeholder="Escribe el numero de la tarjeta" name="usua" type="number">
 								</div>
-						</form>
+								</form>		
+								</div>
+							</div>			
+						</div>
 					</div>
-				</div>			
-			</div>
-		</div>
-	</div>
-</section>
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-5">
+								<button type="submit" class="btn btn-primary">
+									Editar
+								</button>
+							</div>
+							<div class="col-md-5">
+								<a ui-sref="inicioComponent" class="btn btn-sm btn-primary">
+									Volver a inicio
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
     `
 }

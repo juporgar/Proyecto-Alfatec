@@ -16,17 +16,26 @@ export const RegistroComponent = {
 						<form>
 							<h3>datos personales</h3>
 								<div>
-									<p>NHC</p> 
+									<p>NHC *</p> 
 									<input class="form-control" placeholder="número de historia clinica" name="nhc" type="number" required>
-								</div>
+										<div class="invalid-feedback" id="advicePassDiferent">
+											Tienes que introducir el número de la historia clínica del Paciente
+										</div>
+									</div>
 								<div>
-									<p>Nombre</p> 
+									<p>Nombre *</p> 
 									<input class="form-control" placeholder="Escriba el nombre" name="nombre" type="text" required>
 								</div>
+									<div class="invalid-feedback" id="advicePassDiferent">
+										Escribe el nombre del Paciente
+									</div>
 								<div>
-									<p>1º Apellido</p> 
+									<p>1º Apellido *</p> 
 									<input class="form-control" placeholder="Escriba el primero apellido" name="1ape" type="text" required>
 								</div>
+									<div class="invalid-feedback" id="advicePassDiferent">
+										Tienes que escribir el primer apellido del Paciente
+									</div>
 								<div>
 									<p>2º Apellido</p> 
 									<input class="form-control" placeholder="Escriba el segundo apellido" name="2ape" type="text">
@@ -111,17 +120,26 @@ export const RegistroComponent = {
 						<form>
 							<h3>datos personales</h3>
 								<div>
-									<p>Nº colegiado</p> 
+									<p>Nº colegiado *</p> 
 									<input class="form-control" placeholder="Escribe el nº de colegiado" name="numerocolegiado" type="number" required>
 								</div>
+									<div class="invalid-feedback" id="advicePassDiferent">
+										Por favor, escribe el nº de colegiado
+									</div>
 								<div>
-									<p>Nombre</p> 
+									<p>Nombre *</p> 
 									<input class="form-control" placeholder="Escriba el nombre" name="nombreprofesional" type="text" required>
 								</div>
+									<div class="invalid-feedback" id="advicePassDiferent">
+										Debes de escribir el nombre 
+									</div>
 								<div>
-									<p>1º Apellido</p> 
+									<p>1º Apellido *</p> 
 									<input class="form-control" placeholder="Escriba el primero apellido" name="1apeprofesional" type="text" required>
 								</div>
+									<div class="invalid-feedback" id="advicePassDiferent">
+										Debes de escribir el apellido
+									</div>
 								<div>
 									<p>2º Apellido</p> 
 									<input class="form-control" placeholder="Escriba el segundo apellido" name="2apeprofesional" type="text">
@@ -196,7 +214,7 @@ export const RegistroComponent = {
 		<div class="card-body">
 			<div class="row">
 				<div class="col-md-5">
-					<button type="submit" class="btn btn-primary">
+					<button type="submit" value="Añadir" class="btn btn-info">
 						Añadir Registro
 					</button>
 				</div>

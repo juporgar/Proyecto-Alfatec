@@ -31,16 +31,16 @@ const home = angular
             url: '/',
             component:'inicioComponent'})
         .state('infoPaciComponent' , {
-            url: '/infopaci/:userNIF',
+            url: '/infopaci/:userID',
             component:'infoPaciComponent'})
         .state('infoProfeComponent' , {
-            url: '/infoprofe/:userNIF',
+            url: '/infoprofe/:userID',
             component:'infoProfeComponent'})
         .state('editarPacienteComponent' , {
-            url: '/editarpaciente/:userNIF',
+            url: '/editarpaciente/:userID',
             component:'editarPacienteComponent'})    
         .state('editarProfesionalComponent' , {
-            url: '/editarprofesional/:userNIF',
+            url: '/editarprofesional/:userID',
             component:'editarProfesionalComponent'})    
     $urlRouterProvider.otherwise('/error404')                
     }).name

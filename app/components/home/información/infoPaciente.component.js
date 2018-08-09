@@ -1,7 +1,7 @@
 import controller from './info.controller'
 export const InfoPaciComponent = {
     bindings:{
-        dataResult: '<'
+        user: '<'
     },
     controller,
 	template: `
@@ -29,25 +29,34 @@ export const InfoPaciComponent = {
             </tr>
             </thead>
             <tbody>                                     
-            <tr ng-repeat="user in $ctrl.dataResult track by user.nif">  
-                <td>{{user.nhc}}</td>
-                <td>{{user.nombre}}</td>
-                <td>{{user.primerApellido}}</td>
-                <td>{{user.segundoApellido}}</td>
-                <td>{{user.genero}}</td>
-                <td>{{user.fechadenacimiento}}</td>
-                <td>{{user.nif}}</td>
-                <td>{{user.calle}}</td>
-                <td>{{user.numero}}</td>
-                <td>{{user.puerta}}</td>
-                <td>{{user.postal}}</td>
-                <td>{{user.ciudad}}</td>
-                <td>{{user.aseguradora}}</td>
-                <td>{{user.tipodeseguro}}</td>
-                <td>{{user.numerodetarjeta}}</td>
-            </tr>
-        </table>
-    </div>
-</div>
+            <tr>  
+                <td>{{$ctrl.user.nhc}}</td>
+                <td>{{$ctrl.user.nombre}}</td>
+                <td>{{$ctrl.user.segundoApellido}}</td>
+                <td>{{$ctrl.user.primerApellido}}</td>
+                <td>{{$ctrl.user.genero}}</td>
+                <td>{{$ctrl.user.fechadenacimiento}}</td>
+                <td>{{$ctrl.user.nif}}</td>
+                <td>{{$ctrl.user.calle}}</td>
+                <td>{{$ctrl.user.numero}}</td>
+                <td>{{$ctrl.user.puerta}}</td>
+                <td>{{$ctrl.user.postal}}</td>
+                <td>{{$ctrl.user.ciudad}}</td>
+                <td>{{$ctrl.user.aseguradora}}</td>
+                <td>{{$ctrl.user.tipodeseguro}}</td>
+                <td>{{$ctrl.user.numerodetarjeta}}</td>
+                </tr>
+                </table>
+                <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <a ui-sref="inicioComponent" class="btn btn-sm btn-primary">
+                                            Volver a inicio
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+            </div>
+        </div>
     `
 }

@@ -13,11 +13,11 @@ export default class datosService {
             })
     }
     
-    deleteUser(nifUsua) {
-        console.log("Este es el:" + nifUsua);
+    deleteUser(id) {
+        console.log("Este es el:" + id);
         
         for (var i = 0; i < this.users.length; i++) {
-            if (this.users[i].nif === nifUsua) {
+            if (this.users[i].id === id) {
                 var usuario = this.users[i]
                 console.log(usuario);
                 this.users.splice(i,1);
@@ -27,18 +27,12 @@ export default class datosService {
     }
 
     deleteMedic() {
-        var profesiones = "Médico";
-       
+        var profesiones = "Médico";       
         for (var i = this.users.length -1; i >= 0; i--) {
             console.log("Estos son los Médicos que tienes",  this.users[i].nombre , this.users[i].profesion);
             if (this.users[i].profesion === profesiones) {
-                this.users.splice(i,1)
-                
+                this.users.splice(i,1)               
             }
         }
-    }
-    getNif(nif){
-        console.log(nif);
-        
     }
 }
