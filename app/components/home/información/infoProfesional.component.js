@@ -28,7 +28,7 @@ export const InfoProfeComponent = {
             </thead>
             <tbody>                                     
             <tr>  
-                <td>{{$ctrl.user.ncolegiado}}</td>
+                <td>{{$ctrl.user.colegiado}}</td>
                 <td>{{$ctrl.user.nombre}}</td>
                 <td>{{$ctrl.user.primerApellido}}</td>
                 <td>{{$ctrl.user.segundoApellido}}</td>

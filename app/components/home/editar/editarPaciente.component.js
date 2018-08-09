@@ -1,7 +1,7 @@
 import controller from './editar.controller'
 export const EditarPacienteComponent = {
     bindings:{
-        dataResult: '<'
+        user: '<'
     },
     controller,
 	template: `
@@ -16,93 +16,67 @@ export const EditarPacienteComponent = {
 							<h3>datos personales</h3>
 								<div>
 									<p>NHC</p> 
-									<input class="form-control" placeholder="número de historia clinica" name="usua" type="number" required>
+									<input class="form-control" ng-model="$ctrl.user.nhc" placeholder="número de historia clinica" name="usua" type="text" required>
 								</div>
 								<div>
 									<p>Nombre</p> 
-									<input class="form-control" placeholder="Escriba el nombre" name="usua" type="text" required>
+									<input class="form-control" ng-model="$ctrl.user.nombre" placeholder="Escriba el nombre" name="usua" type="text" required>
 								</div>
 								<div>
 									<p>1º Apellido</p> 
-									<input class="form-control" placeholder="Escriba el primero apellido" name="usua" type="text" required>
+									<input class="form-control" ng-model="$ctrl.user.primerApellido" placeholder="Escriba el primero apellido" name="usua" type="text" required>
 								</div>
 								<div>
 									<p>2º Apellido</p> 
-									<input class="form-control" placeholder="Escriba el segundo apellido" name="usua" type="text">
+									<input class="form-control" ng-model="$ctrl.user.segundoApellido" placeholder="Escriba el segundo apellido" name="usua" type="text">
 								</div>
 								<div>
 									<p>Genero</p> 
-									<select class="span3" id="subject" name="subject">
-										<option selected value="na">
-											Selecciona sexo:
-										</option>						
-										<option value="service">
-											Hombre
-										</option>
-										<option value="service">
-											Mujer
-										</option>
-									</select>
+									<input class="form-control" ng-model="$ctrl.user.genero" placeholder="Hombre o Mujer" name="usua" type="text">
 								</div>
 								<div>
 									<p>Fecha de nacimiento</p> 
-									<input class="form-control" placeholder="Escribe tu fecha de cumpleaños" name="usua" type="date">
+									<input class="form-control" ng-model="$ctrl.user.fechadenacimiento" placeholder="Escribe tu fecha de cumpleaños" name="usua" type="text">
 								</div>
 								<div>
 									<p>NIF o Pasaporte</p> 
-									<input class="form-control" placeholder="Escribe tu NIF o Pasaporte" name="usua" type="text">
+									<input class="form-control" ng-model="$ctrl.user.nif" placeholder="Escribe tu NIF o Pasaporte" name="usua" type="text">
 								</div>
 								<br>
 							<h3>Dirección</h3>
 								<div>
 									<p>Calle</p> 
-									<input class="form-control" placeholder="Escribe tu calle" name="usua" type="text">
+									<input class="form-control" ng-model="$ctrl.user.calle" placeholder="Escribe tu calle" name="usua" type="text">
 								</div>
 								<div>
 									<p>Numero</p> 
-									<input class="form-control" placeholder="Numero de patio" name="usua" type="number">
+									<input class="form-control" type="text" string-to-number ng-model="$ctrl.user.numero" placeholder="Numero de patio" name="usua" >
 								</div>
 								<div>
 									<p>Puerta</p> 
-									<input class="form-control" placeholder="Numero de puerta" name="usua" type="text">
+									<input class="form-control" ng-model="$ctrl.user.puerta" placeholder="Numero de puerta" name="usua" type="text">
 								</div>
 								<div>
 									<p>Código Postal</p> 
-									<input class="form-control" placeholder="Escribe el Código Postal" name="usua" type="number">
+									<input class="form-control" ng-model="$ctrl.user.postal" placeholder="Escribe el Código Postal" name="usua" type="text">
 								</div>
 								<div>
 									<p>Ciudad</p> 
-									<input class="form-control" placeholder="Escribe tu Ciudad" name="usua" type="text">
+									<input class="form-control" ng-model="$ctrl.user.ciudad" placeholder="Escribe tu Ciudad" name="usua" type="text">
 								</div>
 								<br>
 							<h3>Lista aseguradora</h3>
 								<div>
 									<p>Nombre aseguradora</p> 
-									<input class="form-control" placeholder="Escribe el nombre de la aseguradora" name="usua" type="text">
+									<input class="form-control" ng-model="$ctrl.user.aseguradora" placeholder="Escribe el nombre de la aseguradora" name="usua" type="text">
 								</div>
 								<div>
 									<p>Tipo de seguro</p> 
-										<select class="span3" id="subject" name="subject">
-											<option selected value="na">
-												Selecciona uno:
-											</option>						
-											<option value="service">
-												Salud
-											</option>
-											<option value="suggestions">
-												Familiar
-											</option>						
-											<option value="product">
-												Dental
-											</option>										
-											<option value="product">
-												Otros
-											</option>
-										</select>
+									<input class="form-control" ng-model="$ctrl.user.tipodeseguro" placeholder="Escriba el tipo de seguro" name="usua" type="text">
 								</div>
 								<div>
 									<p>Numero de la tarjeta</p> 
-									<input class="form-control" placeholder="Escribe el numero de la tarjeta" name="usua" type="number">
+									<input class="form-control" ng-model="$ctrl.user.numerodetarjeta" placeholder="Escribe el numero de la tarjeta" name="usua" type="text">
 								</div>
 								</form>		
 								</div>

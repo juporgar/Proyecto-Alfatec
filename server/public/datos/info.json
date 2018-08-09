@@ -78,7 +78,7 @@
     {
         "id":"5",
         "tipo":"Profesional",
-        "ncolegiado":"1234567",
+        "colegiado":"1234567",
         "nombre": "Juan",
         "primerApellido":"Troya",
         "segundoApellido":"Gimenez",
@@ -95,7 +95,7 @@
     {
         "id":"6",
         "tipo":"Profesional",
-        "ncolegiado":"1234567",
+        "colegiado":"1234567",
         "nombre": "Pepe",
         "primerApellido":"Troya",
         "segundoApellido":"Gimenez",
@@ -112,7 +112,7 @@
     {
         "id":"7",
         "tipo":"Profesional",
-        "ncolegiado":"1234567",
+        "colegiado":"1234567",
         "nombre": "Paco",
         "primerApellido":"Troya",
         "segundoApellido":"Gimenez",
@@ -129,7 +129,7 @@
     {
         "id":"8",
         "tipo":"Profesional",
-        "ncolegiado":"1234567",
+        "colegiado":"1234567",
         "nombre": "Ines",
         "primerApellido":"Troya",
         "segundoApellido":"Gimenez",
@@ -146,7 +146,7 @@
     {
         "id":"9",
         "tipo":"Profesional",
-        "ncolegiado":"1234567",
+        "colegiado":"1234567",
         "nombre": "Sergio",
         "primerApellido":"Troya",
         "segundoApellido":"Gimenez",

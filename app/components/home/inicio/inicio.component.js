@@ -59,7 +59,7 @@ export const InicioComponent = {
                                     <th>Nombre</th>
                                     <th>Apellido</th>
                                     <th>NIF o Pasaporte</th>
-                                    <th>Profesión</th>
+                                    <th>Tipo</th>
                                     <th>Edit</th>
                                   </tr>
                                 </thead>
@@ -68,7 +68,7 @@ export const InicioComponent = {
                                     <td>{{user.nombre}}</td>
                                     <td>{{user.primerApellido}}</td>
                                     <td>{{user.nif}}</td>
-                                    <td>{{user.profesion}}</td>
+                                    <td>{{user.tipo}}</td>
                                     <td>
                                         <a ng-if="user.tipo == 'Paciente'" ui-sref="editarPacienteComponent({userID: user.id})">
                                             <i class="fa fa-pencil-square-o"></i>

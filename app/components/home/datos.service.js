@@ -4,14 +4,22 @@ export default class datosService {
         this.users = [];
     }
 
-    getData() {
-        return this.$http.get('datos/info.json')
-            .then(response => {
-                this.users = response.data
-                
-                return this.users
-            })
-    }
+     getData() {
+         return this.$http.get('datos/info.json')
+             .then(response => {
+                 this.users = response.data            
+                 return this.users
+             })
+     }
+
+    // save() {
+    //     console.log(this.users);
+        
+    //     localStorage.setItem('lists', JSON.stringify(this.users))
+    //   }
+    //   load() {
+    //     this.users = JSON.parse(localStorage.getItem('users')) || [];
+    //   }
     
     deleteUser(id) {
         console.log("Este es el:" + id);
@@ -20,8 +28,7 @@ export default class datosService {
             if (this.users[i].id === id) {
                 var usuario = this.users[i]
                 console.log(usuario);
-                this.users.splice(i,1);
-               
+                this.users.splice(i,1);              
             }
         }
     }

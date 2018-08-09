@@ -12,8 +12,8 @@ class EditarController{
             .then(resultado =>{
                 console.log(resultado);
                  
-                this.dataResult = resultado.filter(item => item.id == + id)[0];
-                console.log(this.dataResult)               
+                this.user = resultado.filter(item => item.id == + id)[0];
+                console.log(this.user)               
             })
     }
 }

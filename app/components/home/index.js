@@ -29,7 +29,8 @@ const home = angular
             component:'error404'})
         .state('inicioComponent' , {
             url: '/',
-            component:'inicioComponent'})
+            component:'inicioComponent',
+        })
         .state('infoPaciComponent' , {
             url: '/infopaci/:userID',
             component:'infoPaciComponent'})
