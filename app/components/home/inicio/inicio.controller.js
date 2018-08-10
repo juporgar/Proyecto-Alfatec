@@ -12,7 +12,6 @@ class InicioController{
     }
     
      deleteUser(id){
-            console.log(id);
             this.datosService.deleteUser(id);
 
             $('#EliminarUsers'+id).modal('hide')

@@ -48,14 +48,14 @@ export const InfoPaciComponent = {
                 </tr>
                 </table>
                 <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-5">
-                                        <a ui-sref="inicioComponent" class="btn btn-sm btn-primary">
-                                            Volver a inicio
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <a ui-sref="inicioComponent" class="btn btn-sm btn-primary">
+                                Volver a inicio
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     `

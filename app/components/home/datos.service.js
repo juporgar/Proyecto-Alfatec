@@ -6,14 +6,12 @@ export default class datosService {
     }
 
      getData() {
-        return Promise.resolve(this.users);
-        
+        return Promise.resolve(this.users);        
      }
 
      saveData(){
         localStorage.setItem('users',JSON.stringify(this.users))
-        console.log('guardado');
-        
+        console.log('guardado');      
      }
      getJson(){
           return this.$http.get('datos/info.json')
@@ -25,19 +23,16 @@ export default class datosService {
 
      loadData(){
         this.users = JSON.parse(localStorage.getItem('users'))
-        if(typeof this.user === 'undefined') {
-            this.getJson()
-            console.log(this.user);            
-        }
+        // if(typeof this.user === 'undefined') {
+        //     this.getJson()
+        //     console.log(this.user);            
+        // }
      }
     
-    deleteUser(id) {
-        console.log("Este es el:" + id);
-        
+    deleteUser(id) {   
         for (var i = 0; i < this.users.length; i++) {
             if (this.users[i].id === id) {
                 var usuario = this.users[i]
-                console.log(usuario);
                 this.users.splice(i,1);              
             }
         }
@@ -47,7 +42,6 @@ export default class datosService {
     deleteMedic() {
         var profesiones = "Médico";       
         for (var i = this.users.length -1; i >= 0; i--) {
-            console.log("Estos son los Médicos que tienes",  this.users[i].nombre , this.users[i].profesion);
             if (this.users[i].profesion === profesiones) {
                 this.users.splice(i,1)               
             }
@@ -56,8 +50,6 @@ export default class datosService {
     }
 
     editUser(user){
-        console.log(this.users);
-        
         for(var i = 0; i < this.users.length; i++){
             if(this.users[i].id == user.id){
                this.users[i] = user
@@ -71,4 +63,3 @@ export default class datosService {
         this.saveData()
     }
 }
-

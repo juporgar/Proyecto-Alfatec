@@ -1,6 +1,5 @@
 import controller from './registro.controller'
 export const RegistroComponent = {
-	
 	controller,
 	template: `
 	<section id="tabs">
