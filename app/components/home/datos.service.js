@@ -7,11 +7,7 @@ export default class datosService {
 
      getData() {
         return Promise.resolve(this.users);
-        //  return this.$http.get('datos/info.json')
-        //      .then(response => {
-        //          this.users = response.data            
-        //          return this.users
-        //      })
+        
      }
 
      saveData(){
@@ -19,9 +15,20 @@ export default class datosService {
         console.log('guardado');
         
      }
+     getJson(){
+          return this.$http.get('datos/info.json')
+              .then(response => {
+                  this.users = response.data                          
+                  return this.users
+              })
+     }
 
      loadData(){
         this.users = JSON.parse(localStorage.getItem('users'))
+        if(typeof this.user === 'undefined') {
+            this.getJson()
+            console.log(this.user);            
+        }
      }
     
     deleteUser(id) {
@@ -52,10 +59,16 @@ export default class datosService {
         console.log(this.users);
         
         for(var i = 0; i < this.users.length; i++){
-            if(this.users[i].id === user.id){
+            if(this.users[i].id == user.id){
                this.users[i] = user
             }
         }
         this.saveData();
     }
+
+    addUser(user){
+        this.users.push(user)
+        this.saveData()
+    }
 }
+

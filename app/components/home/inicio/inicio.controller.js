@@ -19,7 +19,6 @@ class InicioController{
      }
      
      deleteMedic(){
-        console.log("Hola esto es para borrar medicos");
                 this.datosService.deleteMedic();
             }        
 }
