@@ -68,7 +68,6 @@ export const EditarProfesionalComponent = {
 									<p>Ciudad</p> 
 									<input class="form-control" placeholder="Escribe tu Ciudad" ng-model="$ctrl.user.ciudad" name="ciudadprofesional" type="text">
 								</div>
-								<br>
 						</form>		
 					</div>
 				</div>			
@@ -76,12 +75,12 @@ export const EditarProfesionalComponent = {
 		</div>
 		<div class="card-body">
 			<div class="row">
-				<div class="col-md-5">
+				<div class="col-md-2">
 					<button type="submit" ng-click="$ctrl.editUser($ctrl.user)" class="btn btn-primary">
 						Editar
 					</button>
 				</div>
-				<div class="col-md-5">
+				<div class="col-md-3">
 					<a ui-sref="inicioComponent" class="btn btn-sm btn-primary">
 						Volver a inicio
 					</a>

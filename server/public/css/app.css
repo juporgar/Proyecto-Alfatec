@@ -1,10 +1,8 @@
 .header{
-
     background: linear-gradient(cyan, white);
     height: 10vh;
     text-align: center;
 }
-
 .inicio{
     height: 80vh;
     text-align: center;
@@ -14,17 +12,12 @@
     height: 20vh;
     background-color: lightcyan;
 }
-
-
 /*Registro*/
-
 /* Tabs*/
 section {
     padding: 60px 0;
 }
-
 section .section-title {
-    text-align: center;
     color: white;
     margin-bottom: 50px;
     text-transform: uppercase;
@@ -36,7 +29,6 @@ section .section-title {
 #tabs h6.section-title{
     color: black;
 }
-
 #tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
     color: #f3f3f3;
     background-color: transparent;
@@ -52,30 +44,25 @@ section .section-title {
     color: black;
     font-size: 20px;
 }
-
 /*404*/
-
 * {
     margin: 0;
     padding: 0;
   }
-  
   a {
     text-decoration: none;
   }
-  
   body {
     font-weight: 600;
     color: #343434;
   }
-  
   .error_section {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    background-image: linear-gradient(-225deg, #1A1A1A, #343434);
+    background-image: linear-gradient(-225deg, white, #EBEBEB);
   }
   .error_section_subtitle {
     color: #25F193;
@@ -86,32 +73,21 @@ section .section-title {
     margin-bottom: -5em;
   }
   .error_section .error_title {
-    --x-shadow: 0;
-    --y-shadow: 0;
-    --x:50%;
-    --y:50%;
     font-size: 15rem;
-    transition: all 0.2s ease;
     position: relative;
     padding: 2rem;
-  }
-  .error_section .error_title:hover {
-    transition: all 0.2s ease;
-    text-shadow: var(--x-shadow) var(--y-shadow) 10px #1A1A1A;
   }
   .error_section .error_title p {
     position: absolute;
     top: 2rem;
     left: 2rem;
     background-image: radial-gradient(circle closest-side, rgba(255, 255, 255, 0.05), transparent);
-    background-position: var(--x) var(--y);
     background-repeat: no-repeat;
     text-shadow: none;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.1s ease;
   }
-  
   .btn {
     padding: 0.8em 1.5em;
     border-radius: 99999px;
@@ -133,4 +109,3 @@ section .section-title {
     box-shadow: 0px 4px 15px 2px rgba(0, 0, 0, 0.1), inset 0px -3px 7px 0px rgba(0, 0, 0, 0.2);
     transition: ease-out 0.2s all;
   }
-  

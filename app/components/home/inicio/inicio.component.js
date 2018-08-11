@@ -125,9 +125,3 @@ export const InicioComponent = {
 </div>   
         `
 }
-
-{
-    /* <button  ng-click="$ctrl.deleteUser(user.nif)">
-    <i class="fa fa-trash"></i>
-    </button> */
-}

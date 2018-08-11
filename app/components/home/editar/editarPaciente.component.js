@@ -85,12 +85,12 @@ export const EditarPacienteComponent = {
 					</div>
 					<div class="card-body">
 						<div class="row">
-							<div class="col-md-5">
+							<div class="col-md-2">
 								<button type="submit" ng-click="$ctrl.editUser()" class="btn btn-primary">
 									Editar
 								</button>
 							</div>
-							<div class="col-md-5">
+							<div class="col-md-3">
 								<a ui-sref="inicioComponent" class="btn btn-sm btn-primary">
 									Volver a inicio
 								</a>

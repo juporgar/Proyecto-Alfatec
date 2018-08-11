@@ -44,10 +44,7 @@ export const RegistroComponent = {
 								</div>
 								<div>
 									<p>Genero</p> 
-									<select class="span3" id="subject" ng-model="$ctrl.user.genero">
-										<option selected value="na">
-											Selecciona sexo:
-										</option>						
+									<select class="span3" id="subject" ng-model="$ctrl.user.genero">					
 										<option value="Hombre">
 											Hombre
 										</option>
@@ -123,6 +120,7 @@ export const RegistroComponent = {
 												Añadir Registro
 											</button>
 										</div>
+										<div class="col-md-2"></div>
 										<div class="col-md-5">
 											<a ui-sref="inicioComponent" class="btn btn-sm btn-primary">
 												Volver a inicio
@@ -229,6 +227,7 @@ export const RegistroComponent = {
 													Añadir Registro
 												</button>
 											</div>
+											<div class="col-md-2"></div>
 											<div class="col-md-5">
 												<a ui-sref="inicioComponent" class="btn btn-sm btn-primary">
 													Volver a inicio

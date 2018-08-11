@@ -6,7 +6,7 @@ class RegistroController {
     
     addUser() {
         let date = this.user.fechadenacimiento
-        this.user.fechadenacimiento = `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
+        this.user.fechadenacimiento = `${date.getDate()}/${date.getMonth() +1 }/${date.getFullYear()}`;
         this.user.id = `${Date.now()}${Math.round(Math.random()*100)}`;
         this.datosService.addUser(this.user)
     }

@@ -5,54 +5,72 @@ export const InfoProfeComponent = {
     },
     controller,
 	template: `
-<h3>SECCIÓN DE INFORMACIÓN DEL PROFESIONAL </h3>
-<div class="row">
-    <div class="col-md-12">
-        <table class="table table-hover ">
-            <thead class="bg-light ">
-            <tr>
-                <th>Nºcolegiado</th>
-                <th>Nombre</th>
-                <th>1º Apellido</th>
-                <th>2º Apellido</th>
-                <th>Género</th>
-                <th>Fecha de nacimiento</th>
-                <th>NIF o Pasaporte</th>
-                <th>Tipo de profesional</th>
-                <th>Calle</th>
-                <th>Numero</th>
-                <th>Puerta</th>
-                <th>Código Postal</th>
-                <th>Ciudad</th>
-            </tr>
-            </thead>
-            <tbody>                                     
-            <tr>  
-                <td>{{$ctrl.user.colegiado}}</td>
-                <td>{{$ctrl.user.nombre}}</td>
-                <td>{{$ctrl.user.primerApellido}}</td>
-                <td>{{$ctrl.user.segundoApellido}}</td>
-                <td>{{$ctrl.user.genero}}</td>
-                <td>{{$ctrl.user.fechadenacimiento}}</td>
-                <td>{{$ctrl.user.nif}}</td>
-                <td>{{$ctrl.user.profesion}}</td>
-                <td>{{$ctrl.user.calle}}</td>
-                <td>{{$ctrl.user.numero}}</td>
-                <td>{{$ctrl.user.puerta}}</td>
-                <td>{{$ctrl.user.postal}}</td>
-                <td>{{$ctrl.user.ciudad}}</td>
-            </tr>
-        </table>
-        <div class="card-body">
-			<div class="row">
-				<div class="col-md-5">
-					<a ui-sref="inicioComponent" class="btn btn-sm btn-primary">
-						Volver a inicio
-					</a>
-				</div>
+    <section id="tabs">
+	<div class="container">
+    <h3>SECCIÓN DE INFORMACIÓN DEL PROFESIONAL </h3>
+		<div class="row">
+			<div class="col-xs-12 ">
+				<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+					<div class="tab-pane fade show active" id="pacientes" role="tabpanel" aria-labelledby="nav-home-tab">
+						<form>
+							<h3>datos personales</h3>
+								<div>
+									<p>Nº Colegiado: {{$ctrl.user.colegiado}}</p> 
+								</div>
+								<div>
+									<p>Nombre: {{$ctrl.user.nombre}}</p> 
+								</div>
+								<div>
+									<p>1º Apellido: {{$ctrl.user.primerApellido}}</p> 
+								</div>
+								<div>
+									<p>2º Apellido: {{$ctrl.user.segundoApellido}}</p> 
+								</div>
+								<div>
+									<p>Genero: {{$ctrl.user.genero}}</p> 
+								</div>
+								<div>
+									<p>Fecha de nacimiento: {{$ctrl.user.fechadenacimiento}}</p> 
+								</div>
+								<div>
+									<p>NIF o Pasaporte: {{$ctrl.user.nif}}</p> 
+								</div>
+								<div>
+									<p>Profesión: {{$ctrl.user.profesion}}</p> 
+								</div>
+                            <h3>Dirección</h3>
+                                <div>
+                                    <p>Calle: {{$ctrl.user.calle}}</p> 
+                                </div>
+								<div>
+									<p>Numero: {{$ctrl.user.numero}}</p> 
+								</div>
+								<div>
+									<p>Puerta: {{$ctrl.user.puerta}}</p> 
+								</div>
+								<div>
+									<p>Código Postal: {{$ctrl.user.postal}}</p> 
+								</div>
+								<div>
+									<p>Ciudad: {{$ctrl.user.ciudad}}</p> 
+								</div>
+								<br>
+						</form>		
+					</div>
+				</div>			
 			</div>
 		</div>
-    </div>
-</div>
+        <div class="card-body">
+            <div class="row">
+				<div class="col-md-5"></div>   
+                    <div class="col-md-5">
+                        <a ui-sref="inicioComponent" class="btn btn-sm btn-primary">
+                            Volver a inicio
+                        </a>
+                    </div>
+                </div>
+            </div>
+	    </div>
+</section>
     `
 }
