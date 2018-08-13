@@ -9,5 +9,3 @@ npm i
 npm run server
 
 ###Bugs
-
-- No funciona correctamente la función getJSON que esta en el apartado datos.service.js
