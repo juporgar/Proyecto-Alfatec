@@ -57,8 +57,20 @@ export default class datosService {
         }
         this.saveData();
     }
+    editProfesional(user){
+        for(var i = 0; i < this.users.length; i++){
+            if(this.users[i].id == user.id){
+               this.users[i] = user
+            }
+        }
+        this.saveData();
+    }
 
     addUser(user){
+        this.users.push(user)
+        this.saveData()
+    }
+    addProfesional(user){
         this.users.push(user)
         this.saveData()
     }

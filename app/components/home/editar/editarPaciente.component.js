@@ -12,19 +12,34 @@ export const EditarPacienteComponent = {
 			<div class="col-xs-12 ">
 				<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
 					<div class="tab-pane fade show active" id="pacientes" role="tabpanel" aria-labelledby="nav-home-tab">
-						<form>
-							<h3>datos personales</h3>
+					<form name ="formulario" class="needsValidation"  ng-submit="$ctrl.editUser(formulario)" novalidate>
+					<h3>datos personales</h3>
 								<div>
-									<p>NHC</p> 
-									<input class="form-control" ng-model="$ctrl.user.nhc" placeholder="número de historia clinica" name="usua" type="text" required>
+									<p>NHC *</p> 
+									<input class="form-control" ng-model="$ctrl.user.nhc" placeholder="número de historia clinica" name="nhc" type="text" required>
+									<div ng-show:"formulario.$submitted">
+										<div ng-show="formulario.nhc.$error.required">
+											Por favor, escribe el nhc
+										</div>	
+									</div>
 								</div>
 								<div>
-									<p>Nombre</p> 
-									<input class="form-control" ng-model="$ctrl.user.nombre" placeholder="Escriba el nombre" name="usua" type="text" required>
+									<p>Nombre *</p> 
+									<input class="form-control" ng-model="$ctrl.user.nombre" placeholder="Escriba el nombre" name="nombre" type="text" required>
+									<div ng-show:"formulario.$submitted">
+										<div ng-show="formulario.nombre.$error.required">
+											Por favor, escribe el nombre
+										</div>
+									</div>
 								</div>
 								<div>
-									<p>1º Apellido</p> 
-									<input class="form-control" ng-model="$ctrl.user.primerApellido" placeholder="Escriba el primero apellido" name="usua" type="text" required>
+									<p>1º Apellido *</p> 
+									<input class="form-control" ng-model="$ctrl.user.primerApellido" placeholder="Escriba el primero apellido" name="primerApellido" type="text" required>
+									<div ng-show:"formulario.$submitted">
+										<div ng-show="formulario.primerApellido.$error.required">
+											Por favor, escribe el primer apellido
+										</div>
+									</div>								
 								</div>
 								<div>
 									<p>2º Apellido</p> 
@@ -77,27 +92,27 @@ export const EditarPacienteComponent = {
 								<div>
 									<p>Numero de la tarjeta</p> 
 									<input class="form-control" ng-model="$ctrl.user.numerodetarjeta" placeholder="Escribe el numero de la tarjeta" name="usua" type="text">
-								</div>
-								</form>		
-								</div>
-							</div>			
-						</div>
+								</div>		
+							</div>
+						</div>			
 					</div>
-					<div class="card-body">
-						<div class="row">
-							<div class="col-md-2">
-								<button type="submit" ng-click="$ctrl.editUser()" class="btn btn-primary">
-									Editar
-								</button>
-							</div>
-							<div class="col-md-3">
-								<a ui-sref="inicioComponent" class="btn btn-sm btn-primary">
-									Volver a inicio
-								</a>
-							</div>
+				</div>
+				<div class="card-body">
+					<div class="row">
+						<div class="col-md-2">
+							<button type="submit" class="btn btn-primary">
+								Editar
+							</button>
+						</div>
+						<div class="col-md-3">
+							<a ui-sref="inicioComponent" class="btn btn-sm btn-primary">
+								Volver a inicio
+							</a>
 						</div>
 					</div>
 				</div>
-			</section>
-    `
+			</form>
+		</div>
+	</section>
+`
 }

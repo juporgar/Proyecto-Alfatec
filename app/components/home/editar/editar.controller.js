@@ -3,6 +3,7 @@ class EditarController{
         let path = $location.$$path.split('/') 
         this.datosService = datosService;
         this.getID(path[path.length -1]);
+        this.user=[];
     }
 
     getID(id){
@@ -11,8 +12,25 @@ class EditarController{
                 this.user = resultado.filter(item => item.id == + id)[0];
             })
     }
-    editUser(user){        
-        this.datosService.editUser(this.user);
+    editUser(formulario){
+        console.log("hola");
+        
+        console.log(formulario);
+        
+        
+        if( formulario.$invalid === true){
+            return;                        
+        }else{
+            this.datosService.editUser(this.user);
+        }
+    }
+    editProfesional(formularioProfesional){
+        
+        if( formularioProfesional.$invalid === true){
+            return;                        
+        }else{
+            this.datosService.editUser(this.user);
+        }
     }
 }
 

@@ -15,7 +15,7 @@ export const RegistroComponent = {
 				</nav>
 				<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
 					<div class="tab-pane fade show active" id="pacientes" role="tabpanel" aria-labelledby="nav-home-tab">
-						<form class="needs-validation"  ng-submit="$ctrl.addUser()">
+						<form name ="formulario" class="needsValidation"  ng-submit="$ctrl.addUser(formulario)" novalidate>
 							<h3>datos personales</h3>
 								<div>
 									<p>NHC *</p> 
@@ -33,7 +33,7 @@ export const RegistroComponent = {
 								</div>
 								<div>
 									<p>1º Apellido *</p> 
-									<input class="form-control" ng-model="$ctrl.user.primerApellido" placeholder="Escriba el primero apellido" name="1ape" type="text" required>
+									<input class="form-control" ng-model="$ctrl.user.primerApellido" placeholder="Escriba el primero apellido" name="primerApellido" type="text" required>
 									<div class="invalid-feedback">
 										Por favor, escribe el Primer Apellido.
 								  	</div>		
@@ -131,7 +131,7 @@ export const RegistroComponent = {
 						</form>
 					</div>
 					<div class="tab-pane fade" id="profesional" role="tabpanel" aria-labelledby="nav-profile-tab">
-						<form class="needs-validation" ng-submit="$ctrl.addUser()" >
+						<form name="formularioProfesional" class="needsValidation" ng-submit="$ctrl.addProfesional(formularioProfesional)" novalidate>
 							<h3>datos personales</h3>
 								<div>
 									<p>Nº colegiado *</p> 
@@ -149,7 +149,7 @@ export const RegistroComponent = {
 								</div>
 								<div>
 									<p>1º Apellido *</p> 
-									<input class="form-control" ng-model="$ctrl.user.primerApellido" placeholder="Escriba el primero apellido" name="1apeprofesional" type="text" required>
+									<input class="form-control" ng-model="$ctrl.user.primerApellido" placeholder="Escriba el primero apellido" name="apellidoProfesional" type="text" required>
 									<div class="invalid-feedback">
 										Por favor, escribe el Primer Apellido.
 								  	</div>								

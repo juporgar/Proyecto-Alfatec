@@ -12,19 +12,34 @@ export const EditarProfesionalComponent = {
 			<div class="col-xs-12 ">
 				<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
 					<div class="tab-pane fade show active" id="profesional" role="tabpanel" aria-labelledby="nav-home-tab">
-						<form>
+						<form name ="formularioProfesional" class="needsValidation"  ng-submit="$ctrl.editProfesional(formularioProfesional)" novalidate>
 							<h3>datos personales</h3>
 								<div>
 									<p>Nº colegiado</p> 
 									<input ng-model="$ctrl.user.colegiado" class="form-control" placeholder="Escriba el nº de colegiado" name="numerocolegiado" type="text" required>
+									<div ng-show:"formularioProfesional.$submitted">
+										<div ng-show="formularioProfesional.numerocolegiado.$error.required">
+											Por favor, escribe el Nº de colegiado
+										</div>	
+									</div>
 								</div>
 								<div>
 									<p>Nombre</p> 
 									<input ng-model="$ctrl.user.nombre" class="form-control" placeholder="Escriba el nombre" name="nombreprofesional" type="text" required>
+									<div ng-show:"formularioProfesional.$submitted">
+										<div ng-show="formularioProfesional.nombreprofesional.$error.required">
+											Por favor, escribe el nombre
+										</div>	
+									</div>	
 								</div>
 								<div>
 									<p>1º Apellido</p> 
-									<input ng-model="$ctrl.user.primerApellido" class="form-control" placeholder="Escriba el primero apellido" name="1apeprofesional" type="text" required>
+									<input ng-model="$ctrl.user.primerApellido" class="form-control" placeholder="Escriba el primero apellido" name="primerApellido" type="text" required>
+									<div ng-show:"formularioProfesional.$submitted">
+										<div ng-show="formularioProfesional.primerApellido.$error.required">
+											Por favor, escribe el Apellido
+										</div>	
+									</div>	
 								</div>
 								<div>
 									<p>2º Apellido</p> 
@@ -76,7 +91,7 @@ export const EditarProfesionalComponent = {
 		<div class="card-body">
 			<div class="row">
 				<div class="col-md-2">
-					<button type="submit" ng-click="$ctrl.editUser($ctrl.user)" class="btn btn-primary">
+					<button type="submit" class="btn btn-primary">
 						Editar
 					</button>
 				</div>
