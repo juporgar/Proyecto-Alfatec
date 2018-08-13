@@ -20,23 +20,29 @@ export const RegistroComponent = {
 								<div>
 									<p>NHC *</p> 
 									<input class="form-control" ng-model="$ctrl.user.nhc" placeholder="número de historia clinica" name="nhc" type="number" required>
-									<div class="invalid-feedback">
-										Por favor, indica el NHC.
+									<div ng-show="formulario.$submitted">
+										<div ng-show="formulario.nhc.$error.required">
+											Por favor, indica el NHC.
+										</div>
 									</div>	
 								</div>
 								<div>
 									<p>Nombre *</p> 
 									<input class="form-control" ng-model="$ctrl.user.nombre" placeholder="Escriba el nombre" name="nombre" type="text" required>
-									<div class="invalid-feedback">
-										Por favor, escribe el nombre.
-								  	</div>								
+									<div ng-show="formulario.$submitted">
+										<div ng-show="formulario.nombre.$error.required">
+											Por favor, escribe el nombre.
+										</div>								
+									</div>  
 								</div>
 								<div>
 									<p>1º Apellido *</p> 
 									<input class="form-control" ng-model="$ctrl.user.primerApellido" placeholder="Escriba el primero apellido" name="primerApellido" type="text" required>
-									<div class="invalid-feedback">
-										Por favor, escribe el Primer Apellido.
-								  	</div>		
+									<div ng-show="formulario.$submitted">
+										<div ng-show="formulario.primerApellido.$error.required">
+											Por favor, escribe el Primer Apellido.
+										</div>		
+									</div>  
 								</div>
 								<div>
 									<p>2º Apellido</p> 
@@ -136,23 +142,29 @@ export const RegistroComponent = {
 								<div>
 									<p>Nº colegiado *</p> 
 									<input class="form-control" ng-model="$ctrl.user.colegiado" placeholder="Escribe el nº de colegiado" name="numerocolegiado" type="number" required>
-									<div class="invalid-feedback">
-										Por favor, escribe el Nº de colegiado.
-								  	</div>	
+									<div ng-show="formularioProfesional.$submitted">
+										<div ng-show="formularioProfesional.numerocolegiado.$error.required">
+											Por favor, escribe el Nº de colegiado.
+										</div>
+									</div>		
 								</div>
 								<div>
 									<p>Nombre *</p> 
 									<input class="form-control" ng-model="$ctrl.user.nombre" placeholder="Escriba el nombre" name="nombreprofesional" type="text" required>
-									<div class="invalid-feedback">
-										Por favor, escribe el nombre.
-								  	</div>								
+									<div ng-show="formularioProfesional.$submitted">
+										<div ng-show="formularioProfesional.nombreprofesional.$error.required">
+											Por favor, escribe el nombre.
+										</div>
+									</div>									
 								</div>
 								<div>
 									<p>1º Apellido *</p> 
-									<input class="form-control" ng-model="$ctrl.user.primerApellido" placeholder="Escriba el primero apellido" name="apellidoProfesional" type="text" required>
-									<div class="invalid-feedback">
-										Por favor, escribe el Primer Apellido.
-								  	</div>								
+									<input class="form-control" ng-model="$ctrl.user.primerApellido" placeholder="Escriba el primero apellido" name="apellidoProfesinal" type="text" required>
+									<div ng-show="formularioProfesional.$submitted">
+										<div ng-show="formularioProfesional.apellidoProfesinal.$error.required">
+											Por favor, escribe el Primer Apellido.
+										</div>								
+									</div>
 								</div>
 								<div>
 									<p>2º Apellido</p> 

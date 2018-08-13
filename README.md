@@ -11,4 +11,3 @@ npm run server
 ###Bugs
 
 - No funciona correctamente la función getJSON que esta en el apartado datos.service.js
-- No saca el error de validación
