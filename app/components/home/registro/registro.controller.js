@@ -1,7 +1,8 @@
 class RegistroController {
-    constructor(datosService) {
+    constructor(datosService,$state) {
         this.datosService = datosService;
         this.changeRole('Paciente');
+        this.state = $state;
     }
     
     addUser(formulario) {
@@ -9,10 +10,11 @@ class RegistroController {
         if(formulario.$invalid === true) {
             return
         } else {
-        let date = this.user.fechadenacimiento
+//        let date = this.user.fechadenacimiento
         this.user.id = `${Date.now()}${Math.round(Math.random()*100)}`;
-        this.user.fechadenacimiento = `${date.getDate()}/${date.getMonth() +1 }/${date.getFullYear()}`;
+//        this.user.fechadenacimiento = `${date.getDate()}/${date.getMonth() +1 }/${date.getFullYear()}`;
         this.datosService.addUser(this.user)
+        this.state.go('inicioComponent');
         }
     }
     changeRole(role) {
@@ -28,10 +30,11 @@ class RegistroController {
         } else {                  
     
     
-    let date = this.user.fechadenacimiento
+//    let date = this.user.fechadenacimiento
     this.user.id = `${Date.now()}${Math.round(Math.random()*100)}`;
-    this.user.fechadenacimiento = `${date.getDate()}/${date.getMonth() +1 }/${date.getFullYear()}`;
+//    this.user.fechadenacimiento = `${date.getDate()}/${date.getMonth() +1 }/${date.getFullYear()}`;
     this.datosService.addProfesional(this.user)
+    this.state.go('inicioComponent');
     }
 }
 changeRole(role) {

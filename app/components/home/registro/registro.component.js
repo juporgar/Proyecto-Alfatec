@@ -195,16 +195,13 @@ export const RegistroComponent = {
 								<div>	
 									<p>Tipo de profesional</p> 
 									<select class="span3" id="subject" ng-model="$ctrl.user.profesion" name="profesion">
-										<option selected value="na">
-											Selecciona profesión:
-										</option>						
-										<option value="medico">
+										<option value="Médico">
 											Médico
 										</option>
-										<option value="enfermero">
+										<option value="Enfermero">
 											Enfermero
 										</option>
-										<option value="administrativo">
+										<option value="Administrativo">
 											Administrativo
 										</option>
 									</select>

@@ -1,11 +1,8 @@
-import {
-    promises
-} from "fs";
+import {promises} from "fs";
 
 export default class datosService {
     constructor($http) {
         this.$http = $http;
-
     }
 
     getData() {

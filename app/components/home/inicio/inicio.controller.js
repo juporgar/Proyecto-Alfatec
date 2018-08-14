@@ -9,8 +9,7 @@ class InicioController{
     getData(){
         this.datosService.getData()
         .then(resultado=>{
-            this.dataResult = resultado;  
-            console.log('inicio getData',  this.dataResult, resultado);
+            this.dataResult = resultado;
             this.scope.$apply();
                 return resultado;    
             })
