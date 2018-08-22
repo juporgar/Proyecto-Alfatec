@@ -14,34 +14,20 @@ class EditarController{
             })
     }
     editUser(formulario){
-        console.log("hola");
-        
-        console.log(formulario);
-        
         
         if( formulario.$invalid === true){
             
             return;                        
         }else{
-            console.log("HOLLIIIIII!!!!!!");
             this.datosService.editUser(this.user);
-
-            console.log("HOLLA!!!!!!");
             this.state.go('inicioComponent');
         }
     }
     editProfesional(formularioProfesional){
-        console.log("hola");
-        
-        console.log(formularioProfesional);
-        
         if( formularioProfesional.$invalid === true){
             return;                        
         }else{
-            console.log("HOLLIIIIII!!!!!!PROFESIONAL!");
             this.datosService.editProfesional(this.user);
-
-            console.log("Entraste profesional!!!!!!");
             this.state.go('inicioComponent');
         }
     }
