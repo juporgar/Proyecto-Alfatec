@@ -1,7 +1,7 @@
 export const HeaderComponent = {
     template:`
     <div class="header">
-        <h1>Proyecto Alfatec</h1>
+        <h1>Proyecto Crud</h1>
     </div>
     `
 }
